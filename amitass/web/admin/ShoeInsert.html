@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   <style>
+body {
+  background-image:  url("../images/2.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+input:focus, select:focus, textarea:focus {
+   background-color: rgb(255, 255, 180);
+}
+
+label {
+   display: inline-block;
+   width: 120px;
+}
+
+input[type="submit"],
+input[type="reset"]{
+   height: 50px;
+   width: 200px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 50px;
+  background-color: #f2f2f2;
+}
+
+/* Style the input fields */
+input[type=text], input[type=number], input[type=file]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style the form */
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+/* Style the form header */
+h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
+   
+</head>
+
+<ul>
+  <li>
+  <a href="index.jsp">Go Back</a>
+  </li>
+</ul>
+<body>
+     <div class="center">
+      <h2>Insert Shoes Information</h2>
+      <form action="../AddShoe" method="POST" enctype="multipart/form-data">
+         <div>
+         <label>Shoes ID</label>
+            <input name="id" id="shoeCodeBox" type="text" maxlength="5" placeholder="Shoes Code" required/>
+         </div>
+         <div>
+         <label>Shoes Name</label>
+            <input name="name" id="nameBox" type="text" maxlength="20" placeholder="" required/>
+         </div>
+         <div>
+            <label>Shoes Type</label>
+            <input name="type" id="typeBox" type="text" maxlength="30" placeholder="" required/>
+         </div>
+         <div>
+            <label>Shoes Price</label>
+            <input name="price" id="priceBox" type="number" placeholder="" required/>
+         </div>
+         <div>
+         <label>Shoes Size:</label>
+            <input name="size" id="sizeBox" type="text" maxlength="7" placeholder="" required/>
+        </div>
+        <div>
+            <label>Shoes Stock</label>
+            <input name="stock" id="stockBox" type="number"  placeholder="" required/>
+        </div>
+          <div>
+            <label>Shoes PNG</label>
+            <input name="png" id="pngBox" type="file" required/>
+        </div>
+    <input type="submit" name="btnSubmit" value="Insert"/>
+    <input type="reset" name="btnCancel" value="Cancel"/>
+      </form>
+</body>
+     </html>
+    
+
